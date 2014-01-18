@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @card.name
+
+= link_to 'Edit', edit_card_path(@card)
+'|
+= link_to 'Back', cards_path

@@ -1,0 +1,16 @@
+= simple_form_for(@rodizio) do |f|
+  = f.error_notification
+
+  .form-inputs
+    .row
+      .col-md-4
+        = f.input :data
+      .col-md-4
+        = f.input :qtd, label: 'Qtd de rodízios'
+      .col-md-2
+        = f.association :card, label: 'Tipo Pgto'
+      .col-md-2
+        = f.input :valor
+
+  .form-actions
+    = f.button :submit

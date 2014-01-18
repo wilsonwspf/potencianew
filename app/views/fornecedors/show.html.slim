@@ -1,0 +1,36 @@
+p#notice = notice
+
+.row
+  .col-md-12
+    p
+      .btn.btn-danger.btn-block
+        h1 = @fornecedor.nome
+
+.row
+  .col-md-2
+    p
+      strong Telefone<br />
+      = @fornecedor.tel
+  .col-md-2
+    p
+      strong Celular<br />
+      = @fornecedor.cel
+
+  .col-md-3
+    p
+      strong Email<br />
+      = @fornecedor.email
+  .col-md-3
+    p
+      strong URL<br />
+      = @fornecedor.url
+  .col-md-2
+    p
+      strong Contato<br />
+      = @fornecedor.contato
+hr
+.row
+  .col-md-12
+    p
+      strong Observações<br />
+      = @fornecedor.obs

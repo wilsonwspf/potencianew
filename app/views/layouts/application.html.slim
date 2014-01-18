@@ -1,0 +1,82 @@
+doctype html
+html
+  head
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title Potência do Sul
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    /[if lt IE 9]
+      = javascript_include_tag "html5shiv", "data-turbolinks-track" => true
+      = javascript_include_tag "respond.min", "data-turbolinks-track" => true
+  body
+
+    nav.navbar.navbar-default.navbar-inverse.navbar-fixed-top
+
+      a.navbar-brand href="/funcionarios" Potência do Sul
+
+      ul.nav.navbar-nav
+        li
+          a href="/produtos" Produtos
+        li
+          a href="/fornecedors" Fornecedores
+        li
+          a href="/funcionarios" Funcionários
+        li
+          a href="/pagamentos" Pagamentos
+        li
+          a href="/rodizios" Rodízios
+        li
+          a href="/movimentos" Movimento
+        li
+          a href="/vddesserts" Sobremesas
+        li
+          a href="/cxdiarios" Cx Diário
+        li
+          a href="/cofres" Cofre
+        li
+          a href="/vales" Vales
+        li
+          a href="/falta" Faltas
+
+        li.dropdown
+          a.dropdown-toggle data-toggle="dropdown" href="#"
+            | Tabelas
+            b.caret
+          ul.dropdown-menu
+            li
+              a href="/pagamentos?filtro=dia" Pagamentos do mes
+            li
+              a href="/categories" Categorias
+            li
+              a href="/cargos" Cargos
+            li
+              a href="/ocorrencia" Ocorrências
+            li.divider
+            li
+              a href="/cards" Cartões
+            li
+              a href="/desserts" Tipos de sobremesas
+            li
+              a href="/cards" Cartões
+            li
+              a href="/formapgtos" Formas de Pagamento
+            li
+              a href="/tipodocs" Tipos de Documentos
+
+            li
+              a href="/units" Unidades
+            li.divider
+            li
+              a href="#"
+
+    .container
+		  = yield
+  footer
+    .container
+      hr
+      h3 Sistema de Administração da Churrascaria Potência do Sul
+
+
+

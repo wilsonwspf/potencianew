@@ -1,0 +1,55 @@
+h1 Listing cxdiarios
+
+table.table.table-striped
+  tr
+    th Data
+    th Almoço
+    th Rodízios
+    th Dinheiro
+    th VisaC
+    th VisaD
+    th MasterC
+    th MasterC
+    th Redeshop
+    th Amex
+    th Total
+    th Media
+    th Despesas
+    th Descontos
+    th Sobra
+    th Falta
+    th Caixinha
+    th Cofre
+    th
+    th
+    th
+
+  - @cxdiarios.each do |cxdiario|
+    tr
+      td = cxdiario.data.strftime("%d-%m-%Y")
+      td = cxdiario.almoco
+      td = cxdiario.qtdrodizio
+      td = cxdiario.dinheiro
+      td = cxdiario.visaC
+      td = cxdiario.visaD
+      td = cxdiario.masterC
+      td = cxdiario.masterD
+      td = cxdiario.redeshop
+      td = cxdiario.amex
+      td = cxdiario.dinheiro + cxdiario.visaC + cxdiario.visaD + cxdiario.masterC + cxdiario.masterD + cxdiario.redeshop + cxdiario.amex
+      - um = cxdiario.dinheiro + cxdiario.visaC + cxdiario.visaD + cxdiario.masterC + cxdiario.masterD + cxdiario.redeshop + cxdiario.amex
+      td = valor_formatado(um / cxdiario.qtdrodizio)
+
+      td = cxdiario.despesas
+      td = cxdiario.descontos
+      td = cxdiario.sobra
+      td = cxdiario.falta
+      td = cxdiario.caixinha
+      td = cxdiario.cofre
+      td = link_to 'Show', cxdiario
+      td = link_to 'Edit', edit_cxdiario_path(cxdiario)
+      td = link_to 'Destroy', cxdiario, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Cxdiario', new_cxdiario_path

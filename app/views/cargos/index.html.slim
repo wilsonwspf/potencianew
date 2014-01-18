@@ -1,0 +1,20 @@
+h1 Cargos
+
+table.table.table-striped
+  tr
+    th Descricao
+    th
+
+
+  - @cargos.each do |cargo|
+    tr
+      td = cargo.descricao
+      td
+        .btn-group.pull-right
+          = link_to 'Ver', cargo, class: 'btn btn-default btn-sm'
+          = link_to 'Editar', edit_cargo_path(cargo), class: 'btn btn-default btn-sm'
+          = link_to 'Deletar', cargo, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-default btn-sm'
+
+br
+
+= link_to 'Novo Cargo', new_cargo_path, class: 'btn btn-info btn-sm'

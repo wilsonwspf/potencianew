@@ -1,0 +1,11 @@
+= simple_form_for(@ctrldessert) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :data
+    = f.input :dessert_id
+    = f.input :almoco
+    = f.input :qtd
+
+  .form-actions
+    = f.button :submit

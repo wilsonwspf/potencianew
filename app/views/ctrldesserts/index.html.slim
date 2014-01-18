@@ -1,0 +1,25 @@
+h1 Listing ctrldesserts
+
+table
+  tr
+    th Data
+    th Dessert
+    th Almoco
+    th Qtd
+    th
+    th
+    th
+
+  - @ctrldesserts.each do |ctrldessert|
+    tr
+      td = ctrldessert.data
+      td = ctrldessert.dessert_id
+      td = ctrldessert.almoco
+      td = ctrldessert.qtd
+      td = link_to 'Show', ctrldessert
+      td = link_to 'Edit', edit_ctrldessert_path(ctrldessert)
+      td = link_to 'Destroy', ctrldessert, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Ctrldessert', new_ctrldessert_path

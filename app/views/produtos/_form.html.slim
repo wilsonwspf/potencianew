@@ -1,0 +1,23 @@
+= simple_form_for(@produto) do |f|
+  = f.error_notification
+
+  .form-inputs
+    .row
+      .col-md-12
+    = f.input :descricao, label: 'Descrição'
+    .row
+      .col-md-2
+        = f.association :category, label: 'Categoria'
+      .col-md-2
+        = f.association :unit, label: 'Unidade'
+      .col-md-2
+        = f.input :estfixo, label: 'Estoque Fixo', as: :string
+      .col-md-2
+        = f.input :estinicial, label: 'Estoque Inicial'
+      .col-md-2
+        = f.input :compra
+      .col-md-2
+        = f.input :preco, label: 'Preço'
+
+  .form-actions
+    = f.button :submit

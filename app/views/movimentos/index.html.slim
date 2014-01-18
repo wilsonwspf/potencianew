@@ -1,0 +1,25 @@
+h1 Movimentos
+
+table.table.table-striped
+  tr
+    th Produto
+    th E/S
+    th Qtd
+    th Preço
+    th
+    th
+    th
+
+  - @movimentos.each do |movimento|
+    tr
+      td = movimento.produto.descricao
+      td = movimento.es
+      td = movimento.qtd
+      td = movimento.preco
+      td = link_to 'Show', movimento
+      td = link_to 'Edit', edit_movimento_path(movimento)
+      td = link_to 'Destroy', movimento, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'Novo Movimento', new_movimento_path

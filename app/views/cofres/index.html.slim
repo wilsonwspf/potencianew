@@ -1,0 +1,31 @@
+h1 Listing cofres
+
+table.table.table-striped
+  tr
+    th Data
+    th Dinheiro
+    th Moeda
+    th Cheques
+    th Total em R$
+    th Dolares
+    th Euros
+    th
+    th
+    th
+
+  - @cofres.each do |cofre|
+    tr
+      td = cofre.data.strftime("%d-%m-%Y")
+      td = valor_formatado(cofre.dineiro)
+      td = valor_formatado(cofre.moeda)
+      td = valor_formatado(cofre.chqvista)
+      th = valor_formatado(cofre.dineiro + cofre.moeda + cofre.chqvista)
+      td = valor_formatado(cofre.dolares)
+      td = valor_formatado(cofre.euros)
+      td = link_to 'Show', cofre
+      td = link_to 'Edit', edit_cofre_path(cofre)
+      td = link_to 'Destroy', cofre, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Cofre', new_cofre_path

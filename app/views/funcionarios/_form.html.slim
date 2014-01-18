@@ -1,0 +1,38 @@
+= simple_form_for(@funcionario) do |f|
+  = f.error_notification
+
+  .form-inputs
+    .row
+      .col-md-8
+        = f.input :nome, label: 'Nome'
+      .col-md-4
+        = f.input :nascimento, start_year: 1949, end_year: 2000
+    .row
+      .col-md-5
+        = f.input :endereco, label: 'Endereço'
+      .col-md-4
+        = f.input :bairro, label: 'Bairro'
+      .col-md-2
+        = f.input :cidade, label: 'Cidade'
+      .col-md-1
+        = f.input :uf, label: 'UF'
+    .row
+      .col-md-2
+        = f.input :tel, label: 'Telefone'
+      .col-md-2
+        = f.input :cel, label: 'Celular'
+      .col-md-8
+        = f.input :email, label: 'Email'
+    .row
+      .col-md-4
+        = f.input :rg, label: 'RG'
+      .col-md-4
+        = f.input :cpf, label: 'CPF'
+      .col-md-4
+        = f.input :admissao, label: 'Data de admissão'
+    .row
+      .col-md-12
+        = f.input :obs
+
+  .form-actions
+    = f.button :submit

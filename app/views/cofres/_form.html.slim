@@ -1,0 +1,13 @@
+= simple_form_for(@cofre) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :data
+    = f.input :dineiro
+    = f.input :moeda
+    = f.input :chqvista
+    = f.input :dolares
+    = f.input :euros
+
+  .form-actions
+    = f.button :submit

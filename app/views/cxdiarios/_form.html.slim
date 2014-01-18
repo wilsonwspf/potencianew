@@ -1,0 +1,25 @@
+= simple_form_for(@cxdiario) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :data
+    = f.input :almoco
+    = f.input :qtdrodizio
+    = f.input :dinheiro
+    = f.input :visaC
+    = f.input :visaD
+    = f.input :masterC
+    = f.input :masterD
+    = f.input :redeshop
+    = f.input :amex
+    = f.input :total
+    = f.input :media
+    = f.input :despesas
+    = f.input :descontos
+    = f.input :sobra
+    = f.input :falta
+    = f.input :caixinha
+    = f.input :cofre
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,56 @@
+h1 Controle dos Rodízios
+.row
+  .col-md-1
+    .btn.btn-default
+      = link_to 'Todos',  rodizios_path
+  .col-md-1
+    .btn.btn-default
+      = link_to 'A vista',  rodizios_path(filtro: 'avista')
+  .col-md-1
+    .btn.btn-default
+      = link_to 'Cheque',  rodizios_path(filtro: 'ch')
+  .col-md-2
+    .btn.btn-default
+      = link_to 'Crédito Visa',  rodizios_path(filtro: 'cv')
+  .col-md-2
+    .btn.btn-default
+      = link_to 'Crédito Master',  rodizios_path(filtro: 'cm')
+  .col-md-2
+    .btn.btn-default
+      = link_to 'Débito Visa',  rodizios_path(filtro: 'dv')
+  .col-md-2
+    .btn.btn-default
+      = link_to 'Débito Master',  rodizios_path(filtro: 'dm')
+br
+table.table.table-striped
+  tr
+    th Data
+    th Qtd
+    th Valor
+    th Tipo Pgto
+    th
+
+
+  - @rodizios.order(:data).each do |rodizio|
+    tr
+      td = rodizio.data.strftime("%d-%m-%Y")
+      td = valor_formatado(rodizio.qtd)
+      td = valor_formatado(rodizio.valor)
+      td = rodizio.card.name
+      td
+        .btn-group.pull-right
+          = link_to 'Ver', rodizio, class: 'btn btn-default btn-sm'
+          = link_to 'Editar', edit_rodizio_path(rodizio), class: 'btn btn-default btn-sm'
+          = link_to 'Deletar', rodizio, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-default btn-sm'
+
+  tr.danger
+    th Totais
+    th = valor_formatado(@rodizios.pluck(:qtd).sum.round(2))
+    th = valor_formatado(@rodizios.pluck(:valor).sum.round(2))
+    - um = @rodizios.where(1).pluck(:qtd).sum
+    - dois = @rodizios.where(1).pluck(:qtd).sum
+    th = um - dois
+    th
+br
+
+= link_to 'Novo Rodízio', new_rodizio_path, class: 'btn btn-info btn-sm'

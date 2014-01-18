@@ -1,0 +1,19 @@
+h1 Listing tipodocs
+
+table
+  tr
+    th Name
+    th
+    th
+    th
+
+  - @tipodocs.each do |tipodoc|
+    tr
+      td = tipodoc.name
+      td = link_to 'Show', tipodoc
+      td = link_to 'Edit', edit_tipodoc_path(tipodoc)
+      td = link_to 'Destroy', tipodoc, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Tipodoc', new_tipodoc_path

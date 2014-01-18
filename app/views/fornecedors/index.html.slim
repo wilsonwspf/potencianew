@@ -1,0 +1,28 @@
+h1 Fornecedores
+
+table.table.table-striped
+  tr
+    th Nome
+    th Tel
+    th Cel
+    th Email
+    th Contato
+    th
+
+
+  - @fornecedors.order(:nome).each do |fornecedor|
+    tr
+      td = fornecedor.nome
+      td = fornecedor.tel
+      td = fornecedor.cel
+      td = fornecedor.email
+      td = fornecedor.contato
+      td
+        .btn-group.pull-right
+          = link_to 'Ver', fornecedor, class: 'btn btn-default btn-sm'
+          = link_to 'Editar', edit_fornecedor_path(fornecedor), class: 'btn btn-default btn-sm'
+          = link_to 'Deletar', fornecedor, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-default btn-sm'
+
+br
+
+= link_to 'Novo Fornecedor', new_fornecedor_path, class: 'btn btn-info btn-sm'

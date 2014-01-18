@@ -1,0 +1,10 @@
+= simple_form_for(@vale) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :valor
+    = f.input :motivo
+    = f.association :funcionario
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,11 @@
+= simple_form_for(@site) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :cliente
+    = f.input :data
+    = f.input :condicao
+    = f.input :valor
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,9 @@
+= simple_form_for(@comando) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :oque
+    = f.input :como
+
+  .form-actions
+    = f.button :submit

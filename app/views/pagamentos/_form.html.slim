@@ -1,0 +1,16 @@
+= simple_form_for(@pagamento) do |f|
+  = f.error_notification
+
+  .form-inputs
+    .row
+      .col-md-5
+        = f.input :datapgto, label: 'Pagamento'
+      .col-md-2
+        = f.input :valor
+      .col-md-1
+        = f.input :status
+      .col-md-4
+        = f.association :fornecedor
+
+  .form-actions
+    = f.button :submit

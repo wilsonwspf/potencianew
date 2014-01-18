@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  socio_id: 1
+  matricula: MyString
+  filiacao: 2013-12-02 20:31:19
+  nascimento: 2013-12-02 20:31:19
+  nome: MyString
+  Tit_dep: 1
+  natural: MyString
+  uf: MyString
+  endereco: MyString
+  bairro: MyString
+  cep: MyString
+  cidade: MyString
+  ufcid: MyString
+  telres: MyString
+  telfunc: MyString
+  celular: MyString
+  rg: MyString
+  oexp: MyString
+  cpf: 1
+  email: MyString
+  conjuge: MyString
+  nascconjuge: 2013-12-02 20:31:19
+
+two:
+  socio_id: 1
+  matricula: MyString
+  filiacao: 2013-12-02 20:31:19
+  nascimento: 2013-12-02 20:31:19
+  nome: MyString
+  Tit_dep: 1
+  natural: MyString
+  uf: MyString
+  endereco: MyString
+  bairro: MyString
+  cep: MyString
+  cidade: MyString
+  ufcid: MyString
+  telres: MyString
+  telfunc: MyString
+  celular: MyString
+  rg: MyString
+  oexp: MyString
+  cpf: 1
+  email: MyString
+  conjuge: MyString
+  nascconjuge: 2013-12-02 20:31:19

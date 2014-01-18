@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Cliente:
+  = @site.cliente
+p
+  strong Data:
+  = @site.data
+p
+  strong Condicao:
+  = @site.condicao
+p
+  strong Valor:
+  = @site.valor
+
+= link_to 'Edit', edit_site_path(@site)
+'|
+= link_to 'Back', sites_path

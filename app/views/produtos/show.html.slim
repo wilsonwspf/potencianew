@@ -1,0 +1,36 @@
+p#notice = notice
+
+
+.row
+  .col-md-12
+    p
+      .btn.btn-danger.btn-block
+        h1 = @produto.descricao
+
+.row
+  .col-md-2
+    p
+      strong Categoria<br />
+      = @produto.category.name
+  .col-md-2
+    p
+      strong Unidade<br />
+      = @produto.unit.name
+
+  .col-md-2
+    p
+      strong Estoque Fixo<br />
+      = @produto.estfixo
+  .col-md-2
+    p
+      strong Estoque Inicial<br />
+      = @produto.estinicial
+  .col-md-2
+    p
+      strong Compra<br />
+      = @produto.compra
+  .col-md-2
+    p
+      strong Preço<br />
+      = @produto.preco
+

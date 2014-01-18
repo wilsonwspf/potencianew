@@ -1,0 +1,42 @@
+h1 Sobremesas
+.row
+  .col-md-2
+    .btn.btn-default
+      = link_to 'Todos',  vddesserts_path
+  .col-md-2
+    .btn.btn-default
+      = link_to 'Almoço',  vddesserts_path(filtro: 'almoco')
+  .col-md-2
+    .btn.btn-default
+      = link_to 'Jantar',  vddesserts_path(filtro: 'jantar')
+
+br
+table.table.table-striped
+  tr
+    th Data
+    th Sobremesas
+    th Qtd
+    th
+    th
+    th
+
+  - @vddesserts.each do |vddessert|
+    tr
+      td = vddessert.data.strftime("%d-%m-%Y")
+      td = vddessert.dessert.name
+      td = vddessert.qtd
+      td = link_to 'Show', vddessert
+      td = link_to 'Edit', edit_vddessert_path(vddessert)
+      td = link_to 'Destroy', vddessert, data: {:confirm => 'Are you sure?'}, :method => :delete
+  tr.danger
+    th Totais
+    th
+    th = @vddesserts.pluck(:qtd).sum
+    - um = @vddesserts.where(1).pluck(:qtd).sum
+    - dois = @vddesserts.where(1).pluck(:qtd).sum
+    th = um - dois
+    th
+    th
+br
+
+= link_to 'Nova sobremesa', new_vddessert_path

@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Data:
+  = @cofre.data
+p
+  strong Dineiro:
+  = @cofre.dineiro
+p
+  strong Moeda:
+  = @cofre.moeda
+p
+  strong Chqvista:
+  = @cofre.chqvista
+p
+  strong Dolares:
+  = @cofre.dolares
+p
+  strong Euros:
+  = @cofre.euros
+
+= link_to 'Edit', edit_cofre_path(@cofre)
+'|
+= link_to 'Back', cofres_path

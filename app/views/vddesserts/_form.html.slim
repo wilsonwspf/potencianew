@@ -1,0 +1,11 @@
+= simple_form_for(@vddessert) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :data
+    = f.association :dessert
+    = f.input :almoco
+    = f.input :qtd
+
+  .form-actions
+    = f.button :submit

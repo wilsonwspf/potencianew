@@ -1,0 +1,32 @@
+- @funcionarios = Funcionario.all.order(:nome)
+
+h1 Funcionários
+
+table.table.table-striped
+  tr
+    th Nome
+    th Nascimento
+    th Tel
+    th Cel
+    th Email
+    th Admissao
+    th
+
+
+  - @funcionarios.order(:nome).each do |funcionario|
+    tr
+      td = funcionario.nome
+      td = funcionario.nascimento.strftime("%d-%m-%Y")
+      td = funcionario.tel
+      td = funcionario.cel
+      td = funcionario.email
+      td = funcionario.admissao.strftime("%d-%m-%Y")
+      td
+        .btn-group.pull-right
+          = link_to 'Ver', funcionario, class: 'btn btn-default btn-sm'
+          = link_to 'Editar', edit_funcionario_path(funcionario), class: 'btn btn-default btn-sm'
+          = link_to 'Deletar', funcionario, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-default btn-sm'
+
+br
+
+= link_to 'Novo Funcionario', new_funcionario_path, class: 'btn btn-info btn-sm'

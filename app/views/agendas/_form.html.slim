@@ -1,0 +1,12 @@
+= simple_form_for(@agenda) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :nasc
+    = f.input :tel
+    = f.input :cel
+    = f.input :email
+
+  .form-actions
+    = f.button :submit

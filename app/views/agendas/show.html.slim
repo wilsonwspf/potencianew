@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Nome:
+  = @agenda.nome
+p
+  strong Nasc:
+  = @agenda.nasc
+p
+  strong Tel:
+  = @agenda.tel
+p
+  strong Cel:
+  = @agenda.cel
+p
+  strong Email:
+  = @agenda.email
+
+= link_to 'Edit', edit_agenda_path(@agenda)
+'|
+= link_to 'Back', agendas_path

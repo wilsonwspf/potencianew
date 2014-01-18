@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Data:
+  = @ctrldessert.data
+p
+  strong Dessert:
+  = @ctrldessert.dessert_id
+p
+  strong Almoco:
+  = @ctrldessert.almoco
+p
+  strong Qtd:
+  = @ctrldessert.qtd
+
+= link_to 'Edit', edit_ctrldessert_path(@ctrldessert)
+'|
+= link_to 'Back', ctrldesserts_path

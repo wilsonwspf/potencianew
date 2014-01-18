@@ -1,0 +1,21 @@
+h1 Listing units
+
+table.table.table-striped
+  tr
+    th Name
+    th Sigla
+    th
+    th
+    th
+
+  - @units.each do |unit|
+    tr
+      td = unit.name
+      td = unit.sigla
+      td = link_to 'Show', unit
+      td = link_to 'Edit', edit_unit_path(unit)
+      td = link_to 'Destroy', unit, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Unit', new_unit_path

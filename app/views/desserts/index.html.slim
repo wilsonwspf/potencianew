@@ -1,0 +1,19 @@
+h1 Listing desserts
+
+table.table.table-striped
+  tr
+    th Name
+    th
+    th
+    th
+
+  - @desserts.each do |dessert|
+    tr
+      td = dessert.name
+      td = link_to 'Show', dessert
+      td = link_to 'Edit', edit_dessert_path(dessert)
+      td = link_to 'Destroy', dessert, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Dessert', new_dessert_path

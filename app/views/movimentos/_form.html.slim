@@ -1,0 +1,11 @@
+= simple_form_for(@movimento) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :es
+    = f.input :qtd
+    = f.input :preco
+    = f.association :produto
+
+  .form-actions
+    = f.button :submit

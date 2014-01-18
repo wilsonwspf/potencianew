@@ -1,0 +1,19 @@
+h1 Listing formapgtos
+
+table
+  tr
+    th Name
+    th
+    th
+    th
+
+  - @formapgtos.each do |formapgto|
+    tr
+      td = formapgto.name
+      td = link_to 'Show', formapgto
+      td = link_to 'Edit', edit_formapgto_path(formapgto)
+      td = link_to 'Destroy', formapgto, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Formapgto', new_formapgto_path

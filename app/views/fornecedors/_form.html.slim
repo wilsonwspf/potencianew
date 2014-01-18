@@ -1,0 +1,24 @@
+= simple_form_for(@fornecedor) do |f|
+  = f.error_notification
+
+  .form-inputs
+    .row
+      .col-md-12
+        = f.input :nome
+    .row
+      .col-md-2
+        = f.input :tel
+      .col-md-2
+        = f.input :cel
+      .col-md-3
+        = f.input :email
+      .col-md-3
+        = f.input :url
+      .col-md-2
+        = f.input :contato
+    .row
+      .col-md-12
+        = f.input :obs
+
+  .form-actions
+    = f.button :submit

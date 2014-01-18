@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Data:
+  = @vddessert.data
+p
+  strong Dessert:
+  = @vddessert.dessert_id
+p
+  strong Almoco:
+  = @vddessert.almoco
+p
+  strong Qtd:
+  = @vddessert.qtd
+
+= link_to 'Edit', edit_vddessert_path(@vddessert)
+'|
+= link_to 'Back', vddesserts_path

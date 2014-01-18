@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @tipodoc.name
+
+= link_to 'Edit', edit_tipodoc_path(@tipodoc)
+'|
+= link_to 'Back', tipodocs_path

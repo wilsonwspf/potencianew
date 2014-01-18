@@ -1,0 +1,19 @@
+h1 Comandos do Rails
+
+table.table.table-striped
+  tr
+    th O que
+    th
+
+  - @comandos.each do |comando|
+    tr
+      td = comando.oque
+      td
+        .btn-group.pull-right
+          = link_to 'Ver', comando, class: 'btn btn-default btn-sm'
+          = link_to 'Editar', edit_comando_path(comando), class: 'btn btn-default btn-sm'
+          = link_to 'Deletar', comando, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-default btn-sm'
+
+br
+
+= link_to 'Novo Comando', new_comando_path

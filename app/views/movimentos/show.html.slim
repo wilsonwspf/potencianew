@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Es:
+  = @movimento.es
+p
+  strong Qtd:
+  = @movimento.qtd
+p
+  strong Preco:
+  = @movimento.preco
+p
+  strong Produto:
+  = @movimento.produto
+
+= link_to 'Edit', edit_movimento_path(@movimento)
+'|
+= link_to 'Back', movimentos_path

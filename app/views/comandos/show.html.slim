@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Oque:
+  = @comando.oque
+p
+  strong Como:
+  = @comando.como
+
+= link_to 'Edit', edit_comando_path(@comando)
+'|
+= link_to 'Back', comandos_path
