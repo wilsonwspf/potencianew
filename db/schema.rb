@@ -80,14 +80,6 @@ ActiveRecord::Schema.define(version: 20140111151505) do
 
   add_index "ctgs", ["rt_id"], name: "index_ctgs_on_rt_id"
 
-  create_table "ctrldesserts", force: true do |t|
-    t.date     "data"
-    t.boolean  "almoco"
-    t.string   "dessert_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "cxdiarios", force: true do |t|
     t.date     "data"
     t.boolean  "almoco"
@@ -267,8 +259,8 @@ ActiveRecord::Schema.define(version: 20140111151505) do
   create_table "socios", force: true do |t|
     t.integer  "socio_id"
     t.string   "matricula"
-    t.datetime "filiacao"
-    t.datetime "nascimento"
+    t.date     "filiacao"
+    t.date     "nascimento"
     t.string   "nome"
     t.integer  "Tit_dep"
     t.string   "natural"
