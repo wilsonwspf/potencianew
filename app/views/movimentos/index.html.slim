@@ -7,8 +7,7 @@ table.table.table-striped
     th Qtd
     th Preço
     th
-    th
-    th
+
 
   - @movimentos.each do |movimento|
     tr
@@ -16,10 +15,12 @@ table.table.table-striped
       td = movimento.es
       td = movimento.qtd
       td = movimento.preco
-      td = link_to 'Show', movimento
-      td = link_to 'Edit', edit_movimento_path(movimento)
-      td = link_to 'Destroy', movimento, data: {:confirm => 'Are you sure?'}, :method => :delete
+      td
+        .btn-group.pull-right
+          = link_to 'Show', movimento, class: 'btn btn-info btn-sm'
+          = link_to 'Edit', edit_movimento_path(movimento), class: 'btn btn-info btn-sm'
+          = link_to 'Destroy', movimento, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-info btn-sm'
 
 br
 
-= link_to 'Novo Movimento', new_movimento_path
+= link_to 'Novo Movimento', new_movimento_path, class: 'btn btn-info btn-sm'

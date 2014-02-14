@@ -4,16 +4,17 @@ table
   tr
     th Name
     th
-    th
-    th
+
 
   - @formapgtos.each do |formapgto|
     tr
       td = formapgto.name
-      td = link_to 'Show', formapgto
-      td = link_to 'Edit', edit_formapgto_path(formapgto)
-      td = link_to 'Destroy', formapgto, data: {:confirm => 'Are you sure?'}, :method => :delete
+      td
+        .btn-group.pull-right
+          = link_to 'Show', formapgto, class: 'btn btn-info btn-sm'
+          = link_to 'Edit', edit_formapgto_path(formapgto), class: 'btn btn-info btn-sm'
+          = link_to 'Destroy', formapgto, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-info btn-sm'
 
 br
 
-= link_to 'New Formapgto', new_formapgto_path
+= link_to 'Nova Forma de pagamento', new_formapgto_path, class: 'btn btn-info btn-sm'

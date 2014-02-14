@@ -1,4 +1,4 @@
-h1 Listing cofres
+h1 Listando Cofre
 
 table.table.table-striped
   tr
@@ -10,8 +10,7 @@ table.table.table-striped
     th Dolares
     th Euros
     th
-    th
-    th
+
 
   - @cofres.each do |cofre|
     tr
@@ -22,10 +21,12 @@ table.table.table-striped
       th = valor_formatado(cofre.dineiro + cofre.moeda + cofre.chqvista)
       td = valor_formatado(cofre.dolares)
       td = valor_formatado(cofre.euros)
-      td = link_to 'Show', cofre
-      td = link_to 'Edit', edit_cofre_path(cofre)
-      td = link_to 'Destroy', cofre, data: {:confirm => 'Are you sure?'}, :method => :delete
+      td
+        .btn-group.pull-right
+          = link_to 'Show', cofre, class: 'btn btn-info btn-sm'
+          = link_to 'Edit', edit_cofre_path(cofre), class: 'btn btn-info btn-sm'
+          = link_to 'Destroy', cofre, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-info btn-sm'
 
 br
 
-= link_to 'New Cofre', new_cofre_path
+= link_to 'Novo cofre', new_cofre_path, class: 'btn btn-info btn-sm'

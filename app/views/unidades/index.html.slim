@@ -1,19 +1,20 @@
-h1 Listing unidades
+h1 Unidades
 
 table
   tr
     th Descricao
     th
-    th
-    th
+
 
   - @unidades.each do |unidade|
     tr
       td = unidade.descricao
-      td = link_to 'Show', unidade
-      td = link_to 'Edit', edit_unidade_path(unidade)
-      td = link_to 'Destroy', unidade, data: {:confirm => 'Are you sure?'}, :method => :delete
+      td
+        btn-group.pull-right
+          = link_to 'Show', unidade, class: 'btn btn-info btn-sm'
+          = link_to 'Edit', edit_unidade_path(unidade), class: 'btn btn-info btn-sm'
+          = link_to 'Destroy', unidade, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-info btn-sm'
 
 br
 
-= link_to 'New Unidade', new_unidade_path
+= link_to 'New Unidade', new_unidade_path, class: 'btn btn-info btn-sm'

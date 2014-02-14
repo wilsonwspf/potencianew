@@ -5,17 +5,18 @@ table.table.table-striped
     th Name
     th Sigla
     th
-    th
-    th
+
 
   - @units.each do |unit|
     tr
       td = unit.name
       td = unit.sigla
-      td = link_to 'Show', unit
-      td = link_to 'Edit', edit_unit_path(unit)
-      td = link_to 'Destroy', unit, data: {:confirm => 'Are you sure?'}, :method => :delete
+      td
+        .btn-group.pull-right
+          = link_to 'Ver', unit, class: 'btn btn-info btn-sm'
+          = link_to 'Editar', edit_unit_path(unit), class: 'btn btn-info btn-sm'
+          = link_to 'Deletar', unit, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-info btn-sm'
 
 br
 
-= link_to 'New Unit', new_unit_path
+= link_to 'Nova Unidade', new_unit_path, class: 'btn btn-info btn-sm'

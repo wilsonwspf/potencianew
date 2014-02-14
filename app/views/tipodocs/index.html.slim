@@ -4,16 +4,17 @@ table
   tr
     th Name
     th
-    th
-    th
+
 
   - @tipodocs.each do |tipodoc|
     tr
       td = tipodoc.name
-      td = link_to 'Show', tipodoc
-      td = link_to 'Edit', edit_tipodoc_path(tipodoc)
-      td = link_to 'Destroy', tipodoc, data: {:confirm => 'Are you sure?'}, :method => :delete
+      td
+        .btn-group.pull-right
+          = link_to 'Show', tipodoc, class: 'btn btn-info btn-sm'
+          = link_to 'Edit', edit_tipodoc_path(tipodoc), class: 'btn btn-info btn-sm'
+          = link_to 'Destroy', tipodoc, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-info btn-sm'
 
 br
 
-= link_to 'New Tipodoc', new_tipodoc_path
+= link_to 'Novo tipo Doc', new_tipodoc_path, class: 'btn btn-info btn-sm'

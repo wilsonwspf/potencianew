@@ -2,12 +2,12 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :data
-    = f.input :dineiro
-    = f.input :moeda
-    = f.input :chqvista
-    = f.input :dolares
-    = f.input :euros
+    = f.input :data, label: 'Data'
+    = f.input :dineiro, label: 'Dinheiro'
+    = f.input :moeda, label: 'Moeda'
+    = f.input :chqvista, label: 'Cheque a vista'
+    = f.input :dolares, label: 'Dólares'
+    = f.input :euros, label: 'Euros'
 
   .form-actions
     = f.button :submit

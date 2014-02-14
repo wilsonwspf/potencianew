@@ -2,10 +2,10 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :es
-    = f.input :qtd
-    = f.input :preco
-    = f.association :produto
+    = f.input :es, label: 'E / S'
+    = f.input :qtd, label: 'Qtd'
+    = f.input :preco, label: 'Preço'
+    = f.association :produto, label: 'Produto'
 
   .form-actions
     = f.button :submit
