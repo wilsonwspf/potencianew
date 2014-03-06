@@ -2,16 +2,16 @@ h1 Pagamentos a vencer
 .row
   .col-md-2
     .btn.btn-default
-      = link_to 'Todos',  pagamentos_path
+     / = link_to 'Todos',  pagamentos_path
   .col-md-2
     .btn.btn-default
-      = link_to 'No mês',  pagamentos_path(filtro: 'mes')
+     / = link_to 'No mês',  pagamentos_path(filtro: 'mes')
   .col-md-2
     .btn.btn-default
-      = link_to 'No dia',  pagamentos_path(filtro: 'dia')
+     / = link_to 'No dia',  pagamentos_path(filtro: 'dia')
   .col-md-2
     .btn.btn-default
-      = link_to 'Amanhã',  pagamentos_path(filtro: 'amanha')
+     / = link_to 'Amanhã',  pagamentos_path(filtro: 'amanha')
 
 <br />
 table.table.table-striped
@@ -26,7 +26,7 @@ table.table.table-striped
   - @pagamentos.order(:datapgto).each do |pagamento|
     tr
       td = l pagamento.datapgto
-      td = valor_formatado(pagamento.valor)
+      td = valor_formatado(pagamento.valor.round(2))
       td = pagamento.status
       td = pagamento.fornecedor.nome
       td
