@@ -34,14 +34,14 @@ table.table.table-striped
           = link_to 'Ver', pagamento, class: 'btn btn-default btn-sm'
           = link_to 'Editar', edit_pagamento_path(pagamento), class: 'btn btn-default btn-sm'
           = link_to 'Deletar', pagamento, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-default btn-sm'
-  tr.danger
-    td Totais
-    td = valor_formatado(@pagamentos.pluck(:valor).sum.round(2))
-    - um = @pagamentos.where(1).pluck(:valor).sum
-    - dois = @pagamentos.where(1).pluck(:valor).sum
-    td = um - dois
-    td
-    td
+  /tr.danger
+  /  td Totais
+  /  td = valor_formatado(@pagamentos.pluck(:valor).sum.round(2))
+  /  - um = @pagamentos.where(1).pluck(:valor).sum
+  /  - dois = @pagamentos.where(1).pluck(:valor).sum
+  /  td = um - dois
+  /  td
+  /  td
 
 br
 

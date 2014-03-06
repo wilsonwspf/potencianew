@@ -3,16 +3,16 @@ class PagamentosController < ApplicationController
 
   # GET /pagamentos
   def index
-    if params[:filtro] == 'dia'
-      @pagamentos = Pagamento.where(datapgto: Date.today)
-    elsif params[:filtro] == 'mes'
-      @pagamentos = Pagamento.where(datapgto: ((Date.today)..Date.today + 1.month))
-    elsif params[:filtro] == 'amanha'
-      @pagamentos = Pagamento.where(datapgto: (Date.today + 1.day))
+    #if params[:filtro] == 'dia'
+     # @pagamentos = Pagamento.where(datapgto: Date.today)
+    #elsif params[:filtro] == 'mes'
+     # @pagamentos = Pagamento.where(datapgto: ((Date.today)..Date.today + 1.month))
+    #elsif params[:filtro] == 'amanha'
+     # @pagamentos = Pagamento.where(datapgto: (Date.today + 1.day))
 
-    else
+    #else
       @pagamentos = Pagamento.all
-    end
+    #end
 
   end
 
