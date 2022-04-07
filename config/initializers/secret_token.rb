@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Cbtg::Application.config.secret_key_base = 'f104d157a5ec5b570557532fef539cdc596a829ed3dea7e7f0dca0f5fd0cf55ed444c3b7400cf0e309578283c48fbb87ad6e8281538f63bd19383ce05a23a14b'
+Cbtg::Application.config.secret_key_base = 'b1936a85066025760872fdf48c5cde6f'
